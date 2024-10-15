@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Contact - Portfolio Website</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            overflow-x: hidden;
+            background-color: black;
+            color: white;
+        }
+
+        header {
+            margin-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 9%;
+            background-color: transparent;
+            filter: drop-shadow(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 3rem;
+            color: #002fff;
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        nav a {
+            font-size: 1.8rem;
+            color: white;
+            margin-left: 4rem;
+            font-weight: 500;
+            transition: 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #002fff;
+            border-bottom: 3px solid #002fff;
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 5rem 9% 5rem;
+        }
+
+        .contact {
+            min-height: 100vh;
+            padding: 5rem 9% 5rem;
+            background-color: #1e1e1e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-content {
+            text-align: center;
+            max-width: 800px;
+        }
+
+        .contact-content h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .contact-content p {
+            font-size: 1.6rem;
+            margin-bottom: 3rem;
+            color: #ccc;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 1.6rem;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.6rem;
+            border: 2px solid #002fff;
+            border-radius: 0.5rem;
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #002fff;
+        }
+
+        .btn {
+            padding: 1rem 2.8rem;
+            background-color: #002fff;
+            color: black;
+            border-radius: 4rem;
+            font-size: 1.6rem;
+            letter-spacing: 0.3rem;
+            font-weight: 600;
+            border: 2px solid #000000;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: scale3d(1.03);
+            background-color: black;
+            color: #002fff;
+            box-shadow: 0 0 25px #002fff;
+        }
+
+        .social-icons {
+            margin-top: 3rem;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem;
+            height: 4rem;
+            background-color: transparent;
+            border: 0.2rem solid #000000;
+            font-size: 2rem;
+            border-radius: 50%;
+            margin: 0.5rem;
+            transition: 0.3s ease;
+            color: #002fff;
+        }
+
+        .social-icons a:hover {
+            color: black;
+            transform: scale(1.3) translateY(-5px);
+            background-color: #002fff;
+            box-shadow: 0 0 25px #002fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">T.Nicholls</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <div class="contact-content">
+            <h1>Contact Me</h1>
+            <p>If you'd like to get in touch, feel free to send me a message using the form below or reach out directly through my social profiles!</p>
+
+            <form action="https://formspree.io/f/xrbggago" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+            
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/taylor-nicholls-2582b0247/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/TaylorNicho"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
